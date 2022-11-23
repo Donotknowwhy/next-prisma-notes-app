@@ -28,7 +28,7 @@ const Home = ({notes}: Notes) => {
 
   async function create(data: FormData) {
     try {
-      fetch('http://localhost:3000/api/create', {
+      fetch(`/api/create`, {
         body: JSON.stringify(data),
         headers: {
           'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const Home = ({notes}: Notes) => {
 
   async function deleteNote(id: string) {
     try {
-     fetch(`http://localhost:3000/api/note/${id}`, {
+     fetch(`/api/note/${id}`, {
        headers: {
          "Content-Type": "application/json",
        },
